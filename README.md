@@ -65,7 +65,7 @@ provider "cloudflare" {
 ```
 ### Variables
 
-```
+```hcl
 variable "cf_account_id" {
   description = "Cloudflare account ID"
   type        = string
@@ -96,7 +96,7 @@ variable "domain" {
 
 A Record: Points the domain test.example.com to an IP address.
 
-```
+```hcl
 resource "cloudflare_record" "test" {
   name    = "test"
   type    = "A"
@@ -110,29 +110,29 @@ resource "cloudflare_record" "test" {
 ### How to Use
 
 Example:
-```
+```hcl
 export TF_VAR_cf_account_id="your_account_id"
 export TF_VAR_cf_api_token="your_api_token"
 export TF_VAR_cloudflare_zone_id="your_zone_id"
 ```
 
 Initialize Terraform: Run the following command to download the necessary providers:
-```
+```hcl
 terraform init
 ```
 
 Plan Changes: To see what changes will be applied:
-```
+```hcl
 terraform plan
 ```
 
 Apply Changes: Run the following to apply the changes and create the DNS records:
-```
+```hcl
 terraform apply
 ```
 
 Destroy Resources: If you want to remove all resources managed by Terraform:
-```
+```hcl
 terraform destroy
 ```
 
