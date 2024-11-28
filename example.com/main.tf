@@ -4,7 +4,7 @@ resource "cloudflare_record" "test" {
   ttl     = 1
   type    = "A"
   value   = "IP-ADDRES"
-  zone_id = var.cloudflare_zone_id
+  zone_id = var.zone_id
 }
 
 resource "cloudflare_record" "test2" {
@@ -22,7 +22,7 @@ resource "cloudflare_record" "terraform_managed_resource_254bd0cbae7bd6d8d584538
   ttl     = 1
   type    = "CNAME"
   value   = "----"
-  zone_id = var.cloudflare_zone_id
+  zone_id = var.zone_id
 }
 
 resource "cloudflare_record" "mx_oneit_uk2" {
@@ -32,7 +32,7 @@ resource "cloudflare_record" "mx_oneit_uk2" {
   ttl      = 1
   type     = "MX"
   value    = "mx2..eu"
-  zone_id  = var.cloudflare_zone_id
+  zone_id  = var.zone_id
 }
 
 resource "cloudflare_record" "mx_oneit_uk3" {
@@ -42,7 +42,7 @@ resource "cloudflare_record" "mx_oneit_uk3" {
   ttl      = 1
   type     = "MX"
   value    = "mx..eu"
-  zone_id  = var.cloudflare_zone_id
+  zone_id  = var.zone_id
 }
 
 resource "cloudflare_record" "txt_oneit_uk" {
@@ -51,5 +51,5 @@ resource "cloudflare_record" "txt_oneit_uk" {
   ttl     = 1
   type    = "TXT"
   value   = "v=spf1 include:.eu ~all"
-  zone_id = var.cloudflare_zone_id
+  zone_id = var.zone_id
 }

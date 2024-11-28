@@ -1,11 +1,17 @@
 variable "account_id" {
-  type    = string
-  default = "----"
+  type = string
 }
 
-variable "cloudflare_zone_id" {
-  type    = string
-  default = "---"
+variable "zone_id" {
+  type = string
+}
+
+variable "email" {
+  type = string
+}
+
+variable "api_token" {
+  type = string
 }
 
 variable "domain" {
